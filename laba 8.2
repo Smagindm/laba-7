@@ -1,0 +1,20 @@
+class Matrix:
+    def __init__(self, mat):
+        self.mat = mat
+        self.n = len(mat)
+    def solve(self):
+        if self.n == 0: return 0
+        total_sum = 0
+        mx = float('-inf')
+        for k in range (1, self n + 1):
+            for i in range(k):
+                mx=max(mx,self.mat[k-1][i],self.mat[i][k-1])
+                total_sum += mx
+                return total_sum
+            if__name__=="__main__":
+            m=Matrix ([
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+            ])
+            print("Сумма максимумов:", m.solve())
