@@ -1,0 +1,11 @@
+arr = [-1, 2, 3, -4, 5, 6, 7, 0, 9]
+max_len, start, end, cur_len, cur_start = (0,-1, -1, 0, 0)
+for i, x in enumerate(arr):
+    if x > 0:
+        if cur_len == 0: cur_start = i
+        cur_len += 1
+        if cur_len > max_len:
+            max_len, start, end = cur_len, cur_start, i
+        else:
+            cur_len = 0
+            print(f"Кол-во: {max_len}, Границы: [{start}, {end}]" if max_len else "Нет положительных")
